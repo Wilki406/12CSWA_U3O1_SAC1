@@ -41,6 +41,7 @@ lbox = []
 pRanks = []
 dataState = 0
 foreverRecords = []
+
 with open(data, 'r') as file:
     reader = csv.reader(file)
     next(reader)
@@ -69,7 +70,6 @@ with open(data, 'r') as file:
         playerRank = row[4]
 
         foreverRecords.append([firstNames, lastNames, email, pword, playerRank])
-
 
 print(pRanks)
 sg.theme('DarkGrey10')
@@ -171,3 +171,11 @@ while True:
         dataState = 0
 
 window.close()
+
+
+
+
+
+# if statement no work, fix using elif
+# records change and cant go back to normal, new permanent record list that doesnt change 
+# list box stacks data, fix using lbox.clear()
